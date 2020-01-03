@@ -5,7 +5,7 @@ require 'classes.php';
 if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
    // getting user input
    $value = $_POST['input'];
-
+ // fetching the data from excel sheet
    foreach( $xlsx->rows() as $r ) {
        if ($r[0] == $value ){
            checkRow($r);
@@ -19,7 +19,7 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
    echo SimpleXLSX::parseError();
 }
 
-
+// creat a function that loop throw the days and print it 
 function checkRow($r){
     $list =['Sunday','Monday','Tuesday','Wedsday','Thursday','Friday', 'Saturday' ];
 
