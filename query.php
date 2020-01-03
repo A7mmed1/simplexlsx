@@ -14,43 +14,43 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
            // print_r ($r);
            echo '<table border="1" cellpadding="3" style="border-collapse: collapse">';
            if($r[6] == x ){
-                echo 'green';
+                echo '<div style="color:green;"><p> </p>/div>';
 
            }
            else{
                echo 'red';
            }
-           if($r[7] == x ){
+           if($r[7] == 'X' ){
                 echo 'green';
            }
            else{
                echo 'red';
            }
-           if($r[8] == x ){
+           if($r[8] == 'X' ){
                echo 'green';
            }
            else{
                echo 'red';
            }
-           if($r[9] == x ){
+           if($r[9] == 'X' ){
                echo 'green';
            }
            else{
                echo 'red';
            }
-           if($r[10] == x ){
+           if($r[10] == 'X'){
                echo 'green';
            }
            else{
                echo 'red';
            }
-           if($r[11] == x ){
+           if($r[11] == 'X' ){
                echo 'green';
            }
            else{
                echo 'red';
            }
-           if($r[12] == x ){
+           if($r[12] == 'X' ){
                echo 'green';
            }
            else{
