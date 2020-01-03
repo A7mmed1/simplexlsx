@@ -33,16 +33,19 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
 
 
 function checkRow($r){
+    $list =['Sunday','Monday','Tuesday','Wedsday','Thursday','Friday', 'Saturday' ];
+
+
     $i = 0 ;
 
     for($i=0 ; $i<= 6 ; $i++ ){
-        if($r[$i] == 'X'){
-            echo '<div> <p style="color:green;"> available </p></div>';
+        if($r[$i+6] == 'X'){
+            echo '<p>'.$list[$i].'</p>' '<div> <p style="color:green;"> available </p></div>';
 
 
         }
         else{
-            echo '<div> <p style="color:red;> unavailable </p></div>';
+            echo '<p>'.$list[$i].'</p>''<div> <p style="color:red;"> unavailable </p></div>';
 
         }
     }
