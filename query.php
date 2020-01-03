@@ -2,7 +2,7 @@
 
 require 'classes.php';
 if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
-   echo '<table border="1" cellpadding="3" style="border-collapse: collapse">';
+   // echo '<table border="1" cellpadding="3" style="border-collapse: collapse">';
 
 
 
@@ -11,17 +11,15 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
 
    foreach( $xlsx->rows() as $r ) {
        if ($r[0] == $value ){
-           echo $value ;
+           print_r ($r);
        }
-       else {
-           echo "not found";
-       }
+
         // $post = $r->getCell('A'.$r)->getValue();
 
        // echo '<tr><td>'.implode('</td><td>', $r).'</td></tr>';
    }
 
-   echo '</table>';
+   // echo '</table>';
    // or $xlsx->toHTML();
 } else {
    echo SimpleXLSX::parseError();
