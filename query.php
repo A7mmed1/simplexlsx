@@ -6,18 +6,14 @@
     </head>
     <body>
         <?php
-
         require 'classes.php';
         // fetching the data from excel sheet
         if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
            // getting user's input
            $value = $_POST['input'];
            $postalCodeFound = 0;
-
          // looping throw the excel sheet data
            foreach( $xlsx->rows() as $r ) {
-
-
 
                if ($r[0] == $value ){
                    checkRow($r);
@@ -31,7 +27,6 @@
         }else {
            echo SimpleXLSX::parseError();
         }
-
         // creat a function that loop throw the days and print them and show the availablilty
         function checkRow($r){
             $list =['Sunday','Monday','Tuesday','Wedsday','Thursday','Friday', 'Saturday' ];
@@ -44,7 +39,6 @@
 
                 }
             }
-
         }
 
         ?>
@@ -55,8 +49,6 @@
                  <input type="submit" name="" value="Check">
             </form>
         </div>
-
-
 
     </body>
 </html>
