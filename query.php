@@ -3,11 +3,7 @@
 require 'classes.php';
 
 if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
-   
-
-
-
-
+   // getting user input
    $value = $_POST['input'];
 
    foreach( $xlsx->rows() as $r ) {
@@ -16,7 +12,7 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
        }
 
 
-       }
+   }
 
 
 }else {
@@ -24,11 +20,8 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
 }
 
 
-
-
 function checkRow($r){
     $list =['Sunday','Monday','Tuesday','Wedsday','Thursday','Friday', 'Saturday' ];
-
 
     $i = 0 ;
 
