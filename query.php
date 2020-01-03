@@ -47,16 +47,14 @@
         }
 
         ?>
-    </div>
+        </div>
         <div class="container text-center p-5">
             <div class="">
-
                 <form class="" method="post" action="query.php" >
                      <p> Postal code</p><input type="text" name="input" value="">
                      <input type="submit" name="" value="Check">
                 </form>
             </div>
         </div>
-
     </body>
 </html>
