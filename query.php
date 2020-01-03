@@ -32,6 +32,30 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
            else{
                echo 'red';
            }
+           if($r[9] == x ){
+               echo 'green';
+           }
+           else{
+               echo 'red';
+           }
+           if($r[10] == x ){
+               echo 'green';
+           }
+           else{
+               echo 'red';
+           }
+           if($r[11] == x ){
+               echo 'green';
+           }
+           else{
+               echo 'red';
+           }
+           if($r[12] == x ){
+               echo 'green';
+           }
+           else{
+               echo 'red';
+           }
             echo '</table>';
 
        }
