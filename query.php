@@ -7,8 +7,15 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
 
 
 
+   $value = $_POST['input'];
 
    foreach( $xlsx->rows() as $r ) {
+       if ($r[0] == $value ){
+           echo $value ;
+       }
+       else {
+           echo "not found";
+       }
         // $post = $r->getCell('A'.$r)->getValue();
 
        // echo '<tr><td>'.implode('</td><td>', $r).'</td></tr>';
@@ -20,13 +27,7 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
    echo SimpleXLSX::parseError();
 }
 
-   $value = $_POST['input'];
-   if ($value == true ){
-       echo $r[$value];
-   }
-   else {
-       echo "not found";
-   }
+
 
 
 
