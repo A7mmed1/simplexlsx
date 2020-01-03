@@ -12,6 +12,8 @@
         if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
            // getting user's input
            $value = $_POST['input'];
+           $postalCodeFound = 0;
+
          // looping throw the excel sheet data
            foreach( $xlsx->rows() as $r ) {
 
@@ -23,13 +25,13 @@
                    break;
                }
            }
-           $postalCodeFound = 0;
+           if ($postalCodeFound == 0){
+               echo 'Postal code not found';
+           }
         }else {
            echo SimpleXLSX::parseError();
         }
-        if ($postalCodeFound == 0){
-            echo 'Postal code not found';
-        }
+
         // creat a function that loop throw the days and print them and show the availablilty
         function checkRow($r){
             $list =['Sunday','Monday','Tuesday','Wedsday','Thursday','Friday', 'Saturday' ];
