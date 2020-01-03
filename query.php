@@ -19,7 +19,6 @@
            $postalCodeFound = 0;
          // looping throw the excel sheet data
            foreach( $xlsx->rows() as $r ) {
-
                if ($r[0] == $value ){
                    checkRow($r);
                    $postalCodeFound = 1;
