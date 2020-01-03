@@ -14,14 +14,16 @@
            $value = $_POST['input'];
          // looping throw the excel sheet data
            foreach( $xlsx->rows() as $r ) {
-               $postalCodeFound = 0;
+
 
 
                if ($r[0] == $value ){
                    checkRow($r);
                    $postalCodeFound = 1;
+                   break;
                }
            }
+           $postalCodeFound = 0;
         }else {
            echo SimpleXLSX::parseError();
         }
