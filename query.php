@@ -2,10 +2,15 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Challenge </title>
     </head>
     <body>
+        <div class="container text-center p-5">
+
         <?php
+
         require 'classes.php';
         // fetching the data from excel sheet
         if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
@@ -18,11 +23,12 @@
                if ($r[0] == $value ){
                    checkRow($r);
                    $postalCodeFound = 1;
+                   echo '<p class="btn btn-danger">this user is existing and his availablilty as above </p>';
                    break;
                }
            }
            if ($postalCodeFound == 0){
-               echo 'Postal code not found';
+               echo '<p class="btn btn-danger">Postal code not found </p>';
            }
         }else {
            echo SimpleXLSX::parseError();
@@ -42,12 +48,15 @@
         }
 
         ?>
-        <div class="">
-            <form class="" method="post" action="query.php" >
+    </div>
+        <div class="container text-center p-5">
+            <div class="">
 
-                 <p> Postal code</p><input type="text" name="input" value="">
-                 <input type="submit" name="" value="Check">
-            </form>
+                <form class="" method="post" action="query.php" >
+                     <p> Postal code</p><input type="text" name="input" value="">
+                     <input type="submit" name="" value="Check">
+                </form>
+            </div>
         </div>
 
     </body>
