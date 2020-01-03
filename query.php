@@ -13,48 +13,54 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
        if ($r[0] == $value ){
            // print_r ($r);
            echo '<table border="1" cellpadding="3" style="border-collapse: collapse">';
-           if($r[6] == x ){
-                echo '<div style="color:green;"><p> </p>/div>';
+           if($r[6] == 'X' ){
+                echo '<div style="color:green;"><p> available </p></div>';
 
            }
            else{
-               echo 'red';
+               echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[7] == 'X' ){
-                echo 'green';
-           }
-           else{
-               echo 'red';
+               echo '<div style="color:green;"><p> available </p></div>';
+
+          }
+          else{
+              echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[8] == 'X' ){
-               echo 'green';
-           }
-           else{
-               echo 'red';
+               echo '<div style="color:green;"><p> available </p></div>';
+
+          }
+          else{
+              echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[9] == 'X' ){
-               echo 'green';
-           }
-           else{
-               echo 'red';
+               echo '<div style="color:green;"><p> available </p></div>';
+
+          }
+          else{
+              echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[10] == 'X'){
-               echo 'green';
-           }
-           else{
-               echo 'red';
+               echo '<div style="color:green;"><p> available </p></div>';
+
+          }
+          else{
+              echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[11] == 'X' ){
-               echo 'green';
-           }
-           else{
-               echo 'red';
+               echo '<div style="color:green;"><p> available </p></div>';
+
+          }
+          else{
+              echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[12] == 'X' ){
-               echo 'green';
-           }
-           else{
-               echo 'red';
+               echo '<div style="color:green;"><p> available </p></div>';
+
+          }
+          else{
+              echo '<div style="color:red;"><p> unavailable </p></div>';
            }
             echo '</table>';
 
