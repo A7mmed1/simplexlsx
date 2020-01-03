@@ -18,17 +18,6 @@
 
           </div>
 
-         <?php
-            $value = $_POST['input'];
-            if ($value == true ){
-                echo $r[$value];
-            }
-            else {
-                echo "not found";
-            }
-
-
-          ?>
-
+         
      </body>
  </html>

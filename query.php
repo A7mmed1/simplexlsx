@@ -20,4 +20,16 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
    echo SimpleXLSX::parseError();
 }
 
+   $value = $_POST['input'];
+   if ($value == true ){
+       echo $r[$value];
+   }
+   else {
+       echo "not found";
+   }
+
+
+
+
+
  ?>
