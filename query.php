@@ -21,11 +21,11 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
         // $post = $r->getCell('A'.$r)->getValue();
 
        // echo '<tr><td>'.implode('</td><td>', $r).'</td></tr>';
-   }
+
 
    // echo '</table>';
    // or $xlsx->toHTML();
-} else {
+}else {
    echo SimpleXLSX::parseError();
 }
 
@@ -33,55 +33,68 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
 
 
 function checkRow($r){
-    if($r[6] == 'X' ){
-         echo '<div> Sunday : <p style="color:green;"> available </p></div>';
+    $i = 0 ;
 
-    }
-    else{
-        echo '<div> Monday : <p style="color:red;> unavailable </p></div>';
-    }
-    if($r[7] == 'X' ){
-        echo '<div style="color:green;"><p> available </p></div>';
+    for($i=0 ; $i<= 6 ; $i++ ){
+        if($r[$i] == 'X'){
+            echo '<div> <p style="color:green;"> available </p></div>';
 
-   }
-   else{
-       echo '<div style="color:red;"><p> unavailable </p></div>';
-    }
-    if($r[8] == 'X' ){
-        echo '<div style="color:green;"><p> available </p></div>';
 
-   }
-   else{
-       echo '<div style="color:red;"><p> unavailable </p></div>';
-    }
-    if($r[9] == 'X' ){
-        echo '<div style="color:green;"><p> available </p></div>';
+        }
+        else{
+            echo '<div> <p style="color:red;> unavailable </p></div>';
 
-   }
-   else{
-       echo '<div style="color:red;"><p> unavailable </p></div>';
+        }
     }
-    if($r[10] == 'X'){
-        echo '<div style="color:green;"><p> available </p></div>';
-
-   }
-   else{
-       echo '<div style="color:red;"><p> unavailable </p></div>';
-    }
-    if($r[11] == 'X' ){
-        echo '<div style="color:green;"><p> available </p></div>';
-
-   }
-   else{
-       echo '<div style="color:red;"><p> unavailable </p></div>';
-    }
-    if($r[12] == 'X' ){
-        echo '<div ><p style="color:green;"> available </p></div>';
-
-   }
-   else{
-       echo '<div style="color:red;"><p> unavailable </p></div>';
-    }
+   //  if($r[6] == 'X' ){
+   //       echo '<div> <p style="color:green;"> available </p></div>';
+   //
+   //  }
+   //  else{
+   //      echo '<div> Monday : <p style="color:red;> unavailable </p></div>';
+   //  }
+   //  if($r[7] == 'X' ){
+   //      echo '<div style="color:green;"><p> available </p></div>';
+   //
+   // }
+   // else{
+   //     echo '<div style="color:red;"><p> unavailable </p></div>';
+   //  }
+   //  if($r[8] == 'X' ){
+   //      echo '<div style="color:green;"><p> available </p></div>';
+   //
+   // }
+   // else{
+   //     echo '<div style="color:red;"><p> unavailable </p></div>';
+   //  }
+   //  if($r[9] == 'X' ){
+   //      echo '<div style="color:green;"><p> available </p></div>';
+   //
+   // }
+   // else{
+   //     echo '<div style="color:red;"><p> unavailable </p></div>';
+   //  }
+   //  if($r[10] == 'X'){
+   //      echo '<div style="color:green;"><p> available </p></div>';
+   //
+   // }
+   // else{
+   //     echo '<div style="color:red;"><p> unavailable </p></div>';
+   //  }
+   //  if($r[11] == 'X' ){
+   //      echo '<div style="color:green;"><p> available </p></div>';
+   //
+   // }
+   // else{
+   //     echo '<div style="color:red;"><p> unavailable </p></div>';
+   //  }
+   //  if($r[12] == 'X' ){
+   //      echo '<div ><p style="color:green;"> available </p></div>';
+   //
+   // }
+   // else{
+   //     echo '<div style="color:red;"><p> unavailable </p></div>';
+   //  }
 
 }
 
