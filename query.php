@@ -22,12 +22,12 @@
                if ($r[0] == $value ){
                    checkRow($r);
                    $postalCodeFound = 1;
-                   echo '<p class="btn btn-danger">this user is existing and his availablilty as above </p>';
+                   echo '<p class="alert alert-success">this user is existing and his availablilty as above </p>';
                    break;
                }
            }
            if ($postalCodeFound == 0){
-               echo '<p class="btn btn-danger">Postal code not found </p>';
+               echo '<p class="alert alert-danger">Postal code not found </p>';
            }
         }else {
            echo SimpleXLSX::parseError();
@@ -52,7 +52,7 @@
             <div class="">
                 <form class="" method="post" action="query.php" >
                      <p> Postal code</p><input type="text" name="input" value="">
-                     <input type="submit" name="" value="Check">
+                     <input class="btn btn-primary" type="submit" name="" value="Check">
                 </form>
             </div>
         </div>
