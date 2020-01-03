@@ -11,57 +11,61 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
 
    foreach( $xlsx->rows() as $r ) {
        if ($r[0] == $value ){
+           checkRow($r);
+       }
            // print_r ($r);
-           if($r[6] == 'X' ){
-                echo '<div> Sunday : <p style="color:green;"> available </p></div>';
+           function checkRow($r){
+               if($r[6] == 'X' ){
+                    echo '<div> Sunday : <p style="color:green;"> available </p></div>';
+
+               }
+               else{
+                   echo '<div> Monday : <p style="color:red;> unavailable </p></div>';
+               }
+               if($r[7] == 'X' ){
+                   echo '<div style="color:green;"><p> available </p></div>';
+
+              }
+              else{
+                  echo '<div style="color:red;"><p> unavailable </p></div>';
+               }
+               if($r[8] == 'X' ){
+                   echo '<div style="color:green;"><p> available </p></div>';
+
+              }
+              else{
+                  echo '<div style="color:red;"><p> unavailable </p></div>';
+               }
+               if($r[9] == 'X' ){
+                   echo '<div style="color:green;"><p> available </p></div>';
+
+              }
+              else{
+                  echo '<div style="color:red;"><p> unavailable </p></div>';
+               }
+               if($r[10] == 'X'){
+                   echo '<div style="color:green;"><p> available </p></div>';
+
+              }
+              else{
+                  echo '<div style="color:red;"><p> unavailable </p></div>';
+               }
+               if($r[11] == 'X' ){
+                   echo '<div style="color:green;"><p> available </p></div>';
+
+              }
+              else{
+                  echo '<div style="color:red;"><p> unavailable </p></div>';
+               }
+               if($r[12] == 'X' ){
+                   echo '<div ><p style="color:green;"> available </p></div>';
+
+              }
+              else{
+                  echo '<div style="color:red;"><p> unavailable </p></div>';
+               }
 
            }
-           else{
-               echo '<div> Monday : <p style="color:red;> unavailable </p></div>';
-           }
-           if($r[7] == 'X' ){
-               echo '<div style="color:green;"><p> available </p></div>';
-
-          }
-          else{
-              echo '<div style="color:red;"><p> unavailable </p></div>';
-           }
-           if($r[8] == 'X' ){
-               echo '<div style="color:green;"><p> available </p></div>';
-
-          }
-          else{
-              echo '<div style="color:red;"><p> unavailable </p></div>';
-           }
-           if($r[9] == 'X' ){
-               echo '<div style="color:green;"><p> available </p></div>';
-
-          }
-          else{
-              echo '<div style="color:red;"><p> unavailable </p></div>';
-           }
-           if($r[10] == 'X'){
-               echo '<div style="color:green;"><p> available </p></div>';
-
-          }
-          else{
-              echo '<div style="color:red;"><p> unavailable </p></div>';
-           }
-           if($r[11] == 'X' ){
-               echo '<div style="color:green;"><p> available </p></div>';
-
-          }
-          else{
-              echo '<div style="color:red;"><p> unavailable </p></div>';
-           }
-           if($r[12] == 'X' ){
-               echo '<div ><p style="color:green;"> available </p></div>';
-
-          }
-          else{
-              echo '<div style="color:red;"><p> unavailable </p></div>';
-           }
-
        }
 
         // $post = $r->getCell('A'.$r)->getValue();
