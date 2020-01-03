@@ -12,13 +12,12 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
    foreach( $xlsx->rows() as $r ) {
        if ($r[0] == $value ){
            // print_r ($r);
-           echo '<table border="1" cellpadding="3" style="border-collapse: collapse">';
            if($r[6] == 'X' ){
-                echo '<div style="color:green;"><p> available </p></div>';
+                echo '<div> Sunday : <p style="color:green;"> available </p></div>';
 
            }
            else{
-               echo '<div style="color:red;"><p> unavailable </p></div>';
+               echo '<div> Monday : <p style="color:red;> unavailable </p></div>';
            }
            if($r[7] == 'X' ){
                echo '<div style="color:green;"><p> available </p></div>';
@@ -56,13 +55,12 @@ if ( $xlsx = SimpleXLSX::parse('data.xlsx') ) {
               echo '<div style="color:red;"><p> unavailable </p></div>';
            }
            if($r[12] == 'X' ){
-               echo '<div style="color:green;"><p> available </p></div>';
+               echo '<div ><p style="color:green;"> available </p></div>';
 
           }
           else{
               echo '<div style="color:red;"><p> unavailable </p></div>';
            }
-            echo '</table>';
 
        }
 
